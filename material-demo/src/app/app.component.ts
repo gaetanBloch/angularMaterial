@@ -8,8 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
   isChecked = true;
-
-  onChange(event) {
-
+  isCheckedRadio = true;
+  onChange($event) {
+    this.isChecked = !this.isChecked;
+    console.log("new state of the checkbox is " +
+      this.isChecked + " The event is " + $event);
   }
 }
