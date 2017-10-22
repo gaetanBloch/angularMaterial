@@ -7,6 +7,7 @@
 <div *ngIf="showDetails.checked">Some details...</div>
 
 <br/>
+<br/>
 
 <mat-radio-group value="0">
   <mat-radio-button
@@ -18,3 +19,10 @@
 </mat-radio-group>
 
 <br/>
+<br/>
+<br/>
+
+<mat-select [(ngModel)]="color">
+  <mat-option *ngFor="let color of colors"
+          [value]="color.id">{{ color.name }}</mat-option>
+</mat-select>
